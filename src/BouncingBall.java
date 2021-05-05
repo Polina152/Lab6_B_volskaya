@@ -17,8 +17,6 @@ public class BouncingBall{
     private boolean isOnBorder=false;
     private boolean isStopped=false;
 
-
-
     public BouncingBall(Field field) {
         int maxRadius=40;
         int minRadius=3;
@@ -120,17 +118,10 @@ public class BouncingBall{
             }
     }
 
-
     private void RunMethod(){
         try {
             while (true) {
-
-/*                if(speed>=-200){
-                    if(field.GetIsFriction()){
-                        speed-= field.GetFriction();
-                    }
-                }
-*/               if(field.GetIsGrossFeeder()) {
+               if(field.GetIsGrossFeeder()) {
                   GrossFeederRunMethod();
                 }else{
                     RunMethodLogic();
@@ -288,7 +279,6 @@ public class BouncingBall{
     private void WeAreTeamMethod(){
         if(this.name.equals(field.GetName())){
             if(isOnBorder&&field.GetIsMagneto()){
-                //nothing
             }else if(field.GetIsSandPaper()&&isOnBorder){
                 radius-=field.GetSandPaper();
                 if(radius<=0){

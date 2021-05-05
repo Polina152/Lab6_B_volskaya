@@ -26,7 +26,6 @@ public class MainFrame extends JFrame {
         setJMenuBar(menu);
         menu.add(ballsMenu);
         menu.add(controlMenu);
-
         newBallMenuItem = ballsMenu.add(newBallMenuItemAction);
 
         stopSlowBalls=new JCheckBoxMenuItem("ќстановить медленные м€чи");
@@ -38,7 +37,6 @@ public class MainFrame extends JFrame {
         buttonBox.add(speedPlus);
         buttonBox.add(Box.createHorizontalStrut(5));
         buttonBox.add(pause);
-
 
         speedMinus.addActionListener(new SpeedMinusListener());
         speedPlus.addActionListener(new SpeedPlusListener());
@@ -112,7 +110,6 @@ public class MainFrame extends JFrame {
                 field.resume();
                 pause.setText("Pause");
             }
-
         }
     }
 
@@ -120,9 +117,7 @@ public class MainFrame extends JFrame {
 
         @Override
         public void mouseDragged(MouseEvent mouseEvent) {
-
         }
-
         @Override
         public void mouseMoved(MouseEvent mouseEvent) {
             field.SetCords(mouseEvent.getX(),mouseEvent.getY());
